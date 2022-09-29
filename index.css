@@ -18,7 +18,7 @@ main {
   flex-direction: column;
   background: linear-gradient(45deg, #A9D6E5, #021A4A);
   padding: 0;
-  width: 375px;
+  width: 45vw;
   height: 65vh;
   margin: auto;
   justify-content: space-between;
@@ -28,6 +28,7 @@ main {
 .translator__heading {
   color: #A9D6E5;
   width: 375px;
+  font-size: 30px;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -39,15 +40,16 @@ main {
   padding: 0;
   gap: 20px;
 }
-.translator input {
+.translator #input-area {
   background-color: #EBF0F1;
   font-size: medium;
   word-wrap: break-word;
-  word-break: break-all;
   height: 20vh;
-  width: 200px;
-  padding: 0;
-  margin: auto;
+  width: 40vw;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 5px;
   border: none;
 }
 .translator #translate-button {
@@ -68,9 +70,10 @@ main {
   border-radius: 5px;
   justify-content: center;
   align-items: flex-start;
-  padding: 0;
+  font-size: medium;
   margin: auto;
+  padding: 5px;
   margin-bottom: 30px;
   height: 20vh;
-  width: 200px;
+  width: 40vw;
 }/*# sourceMappingURL=index.css.map */

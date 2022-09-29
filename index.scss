@@ -28,7 +28,7 @@ main {
     flex-direction: column;
     background: linear-gradient(45deg, $backgroundColor1, $backgroundColor2);
     padding: 0;
-    width: 375px;
+    width: 45vw;
     height: 65vh;
     margin: auto;
     // margin: 10px 10px 10px 10px;
@@ -39,6 +39,7 @@ main {
     &__heading {
         color: $backgroundColor1;
         width: 375px;
+        font-size: 30px;
         margin-left: auto;
         margin-right: auto;
         padding: 0;
@@ -52,20 +53,23 @@ main {
         // background-color: $translatorBackgroundColor;
         gap: 20px;
     }
-
-    input {
+    #input-area {
         background-color: $displayBackgroundColor;
-        // justify-content: flex-start;
-        // text-align: start;
         font-size: medium;
         word-wrap: break-word;
-        word-break: break-all;
+        // word-break: break-all;
         height: 20vh;
-        width: 200px;
-        padding: 0;
-        margin: auto;
+        width: 40vw;
+        text-align: left;
+        justify-content:flex-start;
+        align-items:flex-start;
+        // width: 200px;
+        padding: 5px;
+        // margin: 0;
+        // margin: auto;
         border: none;
     }
+
     #translate-button { // button start 
         background-color: $displayBackgroundColor;
         color: $buttonFontColor;
@@ -87,10 +91,11 @@ main {
         border-radius: 5px;
         justify-content: center;
         align-items:flex-start;
-        padding: 0;
+        font-size: medium;
         margin: auto;
+        padding: 5px;
         margin-bottom: 30px;
         height: 20vh;
-        width: 200px;
+        width: 40vw;
     }
 }
