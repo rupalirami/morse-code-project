@@ -69,6 +69,7 @@ main {
     #translate-button { // button start 
         background-color: $displayBackgroundColor;
         color: $buttonFontColor;
+        border-radius: 5px;
         width: 150px;
         text-align: center; // centers text in a 
         // margin: auto;
@@ -83,6 +84,7 @@ main {
 
     &__output { // &__output start
         background-color: $displayBackgroundColor;
+        border-radius: 5px;
         justify-content: center;
         align-items:flex-start;
         padding: 0;

@@ -13,7 +13,7 @@ console.log(translatorOutput);
 
 //initialize variables
 
-addButton.addEventListener("click",(event) => {
+translateButton.addEventListener("click",(event) => {
 console.log(`in btn listener input=${textInputValue}`)
     const morsecodeOutput = morseCode(textInputValue);
 console.log(`after func output=${morsecodeOutput}`);

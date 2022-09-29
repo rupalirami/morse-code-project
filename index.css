@@ -53,6 +53,7 @@ main {
 .translator #translate-button {
   background-color: #EBF0F1;
   color: #013A63;
+  border-radius: 5px;
   width: 150px;
   text-align: center;
   margin-top: 15px;
@@ -64,6 +65,7 @@ main {
 }
 .translator__output {
   background-color: #EBF0F1;
+  border-radius: 5px;
   justify-content: center;
   align-items: flex-start;
   padding: 0;

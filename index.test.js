@@ -3,7 +3,7 @@ import{ it, expect } from "@jest/globals";
 
 it("translates an input string with or without spaces to equivalent morse code>", () => {
     const result = morseCode("All our coaches are awesome");
-    expect(result).toBe(".- .-.. .-.. / --- ..- .-. / -.-. --- .- -.-. .... . ... / .- .-. . / .- .-- . ... --- -- .");
+    expect(result).toBe(".- .-.. .-.. --- ..- .-. -.-. --- .- -.-. .... . ... .- .-. . .- .-- . ... --- -- .");
 });
 
 it("translates an input string with or without spaces to equivalent morse code>", () => {
@@ -13,7 +13,7 @@ it("translates an input string with or without spaces to equivalent morse code>"
 
 it("translates an input string which can take any alphanumeric characters to equivalent morse code", () => {
     const result = morseCode("rupali joined deutsche bank in 1996");
-    expect(result).toBe(".-. ..- .--. .- .-.. .. / .--- --- .. -. . -.. / -.. . ..- - ... -.-. .... . / -... .- -. -.- / .. -. / .---- ----. ----. -....");
+    expect(result).toBe(".-. ..- .--. .- .-.. .. .--- --- .. -. . -.. -.. . ..- - ... -.-. .... . -... .- -. -.- .. -. .---- ----. ----. -....");
 });
 
 it("throws an error if input has special characters!" , () => {
