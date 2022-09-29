@@ -1,7 +1,7 @@
 {
   "name": "morse-code-project",
   "version": "1.0.0",
-  "description": "A simple morsecode translator that takes a string as input and translates it into morse code characters. The input takes only alphabetic characters.",
+  "description": "A simple morsecode translator that takes a string as input and translates it into morse code characters. The input takes only alphanumeric characters.",
   "main": "index.js",
   "scripts": {
     "test": "jest"

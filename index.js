@@ -1,7 +1,10 @@
+export const checkValidInput = (inputString) => {
+// const checkValidInput = (inputString) => {
+    // not checking for errors right now
+    // return error message
+};
 export const morseCode = (inputString) => {
 // const morseCode = (inputString) => {
-
-// not checking for errors right now
 
     const morseCodeAlphabet = [
         "A:.-",

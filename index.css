@@ -41,15 +41,18 @@ main {
 }
 .translator input {
   background-color: #EBF0F1;
+  font-size: medium;
+  word-wrap: break-word;
+  word-break: break-all;
   height: 20vh;
   width: 200px;
   padding: 0;
+  margin: auto;
   border: none;
 }
 .translator #translate-button {
   background-color: #EBF0F1;
   color: #013A63;
-  border-radius: 5px;
   width: 150px;
   text-align: center;
   margin-top: 15px;

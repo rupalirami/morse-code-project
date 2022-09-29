@@ -1,5 +1,5 @@
 // import function
-import { morseCode } from "./index.js";
+import { morseCode, checkValidInput } from "./index.js";
 
 // get DOM variables
 const textInput = document.getElementsByTagName("input");
