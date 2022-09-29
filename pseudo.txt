@@ -1,0 +1,16 @@
+1 - error checking
+
+if (sentenceString ![A-Z][0-9]) {
+// return ("Input string should only be alphanumeric and should not have special characters");
+throw new Error("Input string should only be alphanumeric and should not have special characters");
+ }
+
+2 - convert string input to newString by removing spaces and converting to uppercase
+
+3 - convert newString to newStringArray
+
+4 - for each index in newStringArray[index]
+    search for element and return morse code character with space appended at end
+    sample split function - const morsecodeValue = morsecodeAlphabet[mIndex].split(":") + " ";
+
+5 - return morsecodeOutput

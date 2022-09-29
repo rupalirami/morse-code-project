@@ -1,13 +1,73 @@
-export const divide = (numberOne, numberTwo) => {
-    if (numberTwo === 0) {
-        // return ("Cannot divide by 0");
-        throw new Error("Cannot divide by 0");
-    }
+export const morseCode = (inputString) => {
+// const morseCode = (inputString) => {
 
-    if (typeof numberOne !== "number" || typeof numberTwo !== "number") {
-        throw new Error("Both parameters must be numbers");
-    }
-    return (numberOne / numberTwo);
-}
-// const result = multiply(5, 7);
+// not checking for errors right now
+
+    const morseCodeAlphabet = [
+        "A:.-",
+        "B:-...",
+        "C:-.-.",
+        "D:-..",
+        "E:.",
+        "F:..-.",
+        "G:--.",
+        "H:....",
+        "I:..",
+        "J:.---",
+        "K:-.-",
+        "L:.-..",
+        "M:--",
+        "N:-.",
+        "O:---",
+        "P:.--.",
+        "Q:--.-",
+        "R:.-.",
+        "S:...",
+        "T:-",
+        "U:..-",
+        "W:.--",
+        "X:-..-",
+        "Y:-.--",
+        "Z:--..",
+        "0:-----",
+        "1:.----",
+        "2:..---",
+        "3:...--",
+        "4:....-",
+        "5:.....",
+        "6:-....",
+        "7:--...",
+        "8:---..",
+        "9:----."
+    ];
+
+    // let inputString="Rupali R";
+    console.log(`inputstr=${inputString}`);
+    inputString = inputString.toUpperCase();
+    console.log(`upper case inputstr=${inputString}`);
+    inputString = inputString.split(" ").join("");
+    console.log(`no spaces inputstr=${inputString}`);
+    const newStringArray = inputString.split("");
+    console.table(newStringArray);
+
+    let morsecodeString = "";
+    for (let str=0; str < newStringArray.length; str++) {
+        const stringChar = newStringArray[str];
+    console.log(`index str=${str} value=${stringChar}`);
+        let morsecodeValueArray = "";
+        for (let i=0; i < morseCodeAlphabet.length; i++) {
+    console.log(`index i=${i}`);
+            if (morseCodeAlphabet[i].startsWith(stringChar)) {
+                morsecodeValueArray = morseCodeAlphabet[i].split(":");
+    console.log(`morseValueArray=${morsecodeValueArray}`);
+                morsecodeString = morsecodeString + morsecodeValueArray[1] + " ";
+    console.log(`morse output str=${morsecodeString}`);
+            };
+        };
+    };
+    return morsecodeString;
+};
+
+// const result = morseCode("Rupali R");
 // console.log(result);
+// console.log(".-. ..- .--. .- .-.. .. .-.");
