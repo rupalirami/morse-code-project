@@ -1,23 +1,19 @@
 $fontFamily: sans-serif, Arial, Helvetica;
 $backgroundColor: whitesmoke;
-$translatorBackgroundColor: #dee2e6;
-$displayBackgroundColor: #adb5bd;
-$shadowColor: #6c757d;
+$backgroundColor1: #A9D6E5;
+$backgroundColor2: #021A4A;
+$displayBackgroundColor: #EBF0F1;
+$shadowColor: #021A4A;
 $regularFontColor: #212529;
-$resultsFontColor: #457b9d;
-$inputsFontColor: #6c757d;
-$buttonLightGrey: #e9ecef;
-$buttonBlue: #457b9d;
+$buttonFontColor: #013A63;
+
 
 * { // * start
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding-top: 20px;
     font-family: sans-serif, Arial, Helvetica;
-    background-color: $backgroundColor;
     color: $regularFontColor;
     font-size: 20px;
-    // border-radius: 10px;
-    // border: 2px solid $shadowColor;
 } // * end
 
 main {
@@ -26,32 +22,68 @@ main {
     display: flex;
     flex-direction: column;
 }
-h1 {
-    border: 1px solid rebeccapurple;
-    width: 375px;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-}
+
 .translator {
     display: flex;
     flex-direction: column;
-    // border: 2px solid black;
-    // border-radius: 25px;
-    background-color: $translatorBackgroundColor;
+    background: linear-gradient(45deg, $backgroundColor1, $backgroundColor2);
+    padding: 0;
     width: 375px;
     height: 65vh;
-    margin: 30px 10px 10px 10px;
-    justify-content: center;
+    margin: auto;
+    // margin: 10px 10px 10px 10px;
+    justify-content: space-between;
     align-items: center;
     justify-items: center;
 
+    &__heading {
+        color: $backgroundColor1;
+        width: 375px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        text-align: center;
+    }
+
+    &__input { // &__input start
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        // background-color: $translatorBackgroundColor;
+        gap: 20px;
+    }
+
+    input {
+        background-color: $displayBackgroundColor;
+        height: 20vh;
+        width: 200px;
+        padding: 0;
+        border: none;
+    }
+    #translate-button { // button start 
+        background-color: $displayBackgroundColor;
+        color: $buttonFontColor;
+        border-radius: 5px;
+        width: 150px;
+        text-align: center; // centers text in a 
+        // margin: auto;
+        margin-top: 15px;
+        padding: 0;
+        box-shadow: 5px 5px $shadowColor;
+    } // button end
+
+    #translate-button:active { // .button:active start
+        box-shadow: 8px 6px $shadowColor;
+    }
+
     &__output { // &__output start
-        border: 1px solid red;
-        background-color: $backgroundColor;
+        background-color: $displayBackgroundColor;
         justify-content: center;
         align-items:flex-start;
-        padding: 10px;
-        margin: 20px 10px 20px 10px;
+        padding: 0;
+        margin: auto;
+        margin-bottom: 30px;
+        height: 20vh;
+        width: 200px;
     }
 }

@@ -1,8 +1,7 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding-top: 20px;
   font-family: sans-serif, Arial, Helvetica;
-  background-color: whitesmoke;
   color: #212529;
   font-size: 20px;
 }
@@ -14,30 +13,59 @@ main {
   flex-direction: column;
 }
 
-h1 {
-  border: 1px solid rebeccapurple;
-  width: 375px;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-}
-
 .translator {
   display: flex;
   flex-direction: column;
-  background-color: #dee2e6;
+  background: linear-gradient(45deg, #A9D6E5, #021A4A);
+  padding: 0;
   width: 375px;
   height: 65vh;
-  margin: 30px 10px 10px 10px;
-  justify-content: center;
+  margin: auto;
+  justify-content: space-between;
   align-items: center;
   justify-items: center;
 }
+.translator__heading {
+  color: #A9D6E5;
+  width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  text-align: center;
+}
+.translator__input {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 20px;
+}
+.translator input {
+  background-color: #EBF0F1;
+  height: 20vh;
+  width: 200px;
+  padding: 0;
+  border: none;
+}
+.translator #translate-button {
+  background-color: #EBF0F1;
+  color: #013A63;
+  border-radius: 5px;
+  width: 150px;
+  text-align: center;
+  margin-top: 15px;
+  padding: 0;
+  box-shadow: 5px 5px #021A4A;
+}
+.translator #translate-button:active {
+  box-shadow: 8px 6px #021A4A;
+}
 .translator__output {
-  border: 1px solid red;
-  background-color: whitesmoke;
+  background-color: #EBF0F1;
   justify-content: center;
   align-items: flex-start;
-  padding: 10px;
-  margin: 20px 10px 20px 10px;
+  padding: 0;
+  margin: auto;
+  margin-bottom: 30px;
+  height: 20vh;
+  width: 200px;
 }/*# sourceMappingURL=index.css.map */
