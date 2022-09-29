@@ -41,27 +41,25 @@ export const morseCode = (inputString) => {
         "9:----."
     ];
 
-    // let inputString="Rupali R";
-    console.log(`inputstr=${inputString}`);
+console.log(`inputstr=${inputString}`);
     inputString = inputString.toUpperCase();
-    console.log(`upper case inputstr=${inputString}`);
+console.log(`upper case inputstr=${inputString}`);
     inputString = inputString.split(" ").join("");
-    console.log(`no spaces inputstr=${inputString}`);
+console.log(`no spaces inputstr=${inputString}`);
     const newStringArray = inputString.split("");
-    console.table(newStringArray);
+console.table(newStringArray);
 
     let morsecodeString = "";
     for (let str=0; str < newStringArray.length; str++) {
         const stringChar = newStringArray[str];
-    console.log(`index str=${str} value=${stringChar}`);
+console.log(`index str=${str} value=${stringChar}`);
         let morsecodeValueArray = "";
         for (let i=0; i < morseCodeAlphabet.length; i++) {
-    console.log(`index i=${i}`);
             if (morseCodeAlphabet[i].startsWith(stringChar)) {
                 morsecodeValueArray = morseCodeAlphabet[i].split(":");
-    console.log(`morseValueArray=${morsecodeValueArray}`);
+console.log(`morseValueArray=${morsecodeValueArray}`);
                 morsecodeString = morsecodeString + morsecodeValueArray[1] + " ";
-    console.log(`morse output str=${morsecodeString}`);
+console.log(`morse output str=${morsecodeString}`);
             };
         };
     };
