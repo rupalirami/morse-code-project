@@ -9,8 +9,8 @@ const textInput = document.getElementById("#input-area");
 // console.log(`textinputvalue=${textInputValue}`);
 const translateButton = document.querySelector("#translate-button");
 console.log(translateButton);
-const translatorOutput = document.querySelector(".translator__output");
-console.log(translatorOutput);
+const translatedOutput = document.querySelector("#output-area");
+console.log(translatedOutput);
 
 //initialize variables
 
@@ -25,7 +25,7 @@ console.log(`isvalid=${isValidString}`);
     if (isValidString) {
         const morsecodeOutput = morseCode(textInputValue);
 console.log(`after func output=${morsecodeOutput}`);
-        translatorOutput.innerHTML = morsecodeOutput;
+        translatedOutput.innerHTML = morsecodeOutput;
     }
 
 });

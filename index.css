@@ -65,7 +65,7 @@ main {
 .translator #translate-button:active {
   box-shadow: 8px 6px #021A4A;
 }
-.translator__output {
+.translator #output-area {
   background-color: #EBF0F1;
   border-radius: 5px;
   justify-content: center;

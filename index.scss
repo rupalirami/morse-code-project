@@ -86,7 +86,7 @@ main {
         box-shadow: 8px 6px $shadowColor;
     }
 
-    &__output { // &__output start
+    #output-area { // &__output start
         background-color: $displayBackgroundColor;
         border-radius: 5px;
         justify-content: center;
