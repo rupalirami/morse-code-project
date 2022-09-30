@@ -10,11 +10,15 @@
 
     <section class="translator">
         <h1 class="translator__heading">Morse Code Translator</h1>
+        <label class="toggle">
+            <input type="checkbox">
+            <span class="slider"></span>
+            <span class="labels" data-on="English" data-off="Morse"></span>
+        </label>
         <form class="translator__input"> 
-            <textarea id="input-area" name="input-area" rows="5" cols="30" placeholder="Input your sentence here to translate to Morse Code"></textarea>
-            <button type="submit" id="translate-button">Translate to Morse Code</button>
+            <textarea autofocus id="input-area" name="input-area" rows="5" cols="30" placeholder="Input your sentence here to translate"></textarea>
+            <button type="submit" id="translate-button">Translate</button>
         </form>
-        <!-- .. -. .--. ..- - / -.-- --- ..- .-. / ... . -. - . -. -.-. . / .... . .-. . / - --- / - .-. .- -. ... .-.. .- - . / - --- / -- --- .-. ... . / -.-. --- -.. . -->
         <textarea 
             id="output-area" 
             name="output-area" 
