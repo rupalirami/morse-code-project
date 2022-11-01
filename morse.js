@@ -1,16 +1,4 @@
-// const checkValidInput = (inputString) => {
-
-//     isValid = /^[A-Za-z0-9 ]*$/.test(inputString);
-//     console.log(isValid);
-
-//     if (isValid) {
-//         throw new Error("Cannot have special characters in your input string");
-//     } else {
-//         return isValid;
-//     };
-// };
-
-const morseCode = (inputString) => {
+const morseCode = (inputString, switchValue) => {
 
     const morseCodeAlphabet = [
         "A:.- ",
@@ -51,49 +39,58 @@ const morseCode = (inputString) => {
         "9:----. ",
         " :/ "
     ];
+let newStringArray = [];
+let morsecodeValueArray = "";
+let stringChar = "";
 
+    if (switchValue === "on") {
+console.log("in switch on")
 console.log(`inputstr=${inputString}`);
-    inputString = inputString.toUpperCase();
+        inputString = inputString.toUpperCase();
 console.log(`upper case inputstr=${inputString}`);
-//     inputString = inputString.split(" ").join("");
-// console.log(`no spaces inputstr=${inputString}`);
-    const newStringArray = inputString.split("");
+        newStringArray = inputString.split("");
 console.table(`array=${newStringArray}`);
-
-    let morsecodeString = "";
-    for (let str=0; str < newStringArray.length; str++) {
-        const stringChar = newStringArray[str];
-console.log(`index str=${str} value=${stringChar}`);
-        let morsecodeValueArray = "";
-        for (let i=0; i < morseCodeAlphabet.length; i++) {
-            if (morseCodeAlphabet[i].startsWith(stringChar)) {
-                morsecodeValueArray = morseCodeAlphabet[i].split(":");
+        translatedString = "";
+        for (let str=0; str < newStringArray.length; str++) {
+            stringChar = newStringArray[str];
+ console.log(`index str=${str} value=${stringChar}`);
+            morsecodeValueArray = "";
+            for (let i=0; i < morseCodeAlphabet.length; i++) {
+                if (morseCodeAlphabet[i].startsWith(stringChar)) {
+                    morsecodeValueArray = morseCodeAlphabet[i].split(":");
 console.log(`morseValueArray=${morsecodeValueArray}`);
-                morsecodeString = morsecodeString + morsecodeValueArray[1];
-console.log(`morse output str=${morsecodeString}`);
+                    morsecodeString = morsecodeString + morsecodeValueArray[1];
+ console.log(`morse output str=${morsecodeString}`);
+                };
             };
         };
+        return translatedString.trim();
+    } else if (switchValue === "off") {
+console.log("in switch off");
+console.log(`inputstr=${inputString}`);
+        newStringArray = inputString.split(" ");
+console.table(`array=${newStringArray}`);
+console.log(`length=${newStringArray.length}`);
+        translatedString = "";
+        for (let str=0; str < newStringArray.length; str++) {
+            stringChar = newStringArray[str];
+console.log(`index str=${str} value=${stringChar}`);
+
+            morsecodeValueArray = "";
+            for (let i=0; i < morseCodeAlphabet.length; i++) {
+                const searchPosition = morseCodeAlphabet[i].search(stringChar);
+                if (searchPosition !== -1) {
+console.log(`string position=${searchPosition}`);
+                    morsecodeValueArray = morseCodeAlphabet[i].split(":");
+console.log(`morseValueArray=${morsecodeValueArray}`);
+                    translatedString = translatedString + morseCodeAlphabet[0];
+console.log(`morse output str=${translatedString}`);
+                }
+            };
+        };
+        return translatedString.trim();
     };
-    return morsecodeString.trim();
-}
+};
 
-// const result = morseCode("Rupali R");
-// console.log(result);
-// console.log(".-. ..- .--. .- .-.. .. / .-.");
-
-let input="Rupali R";
-console.log(morseCode(input));
-console.log(".-. ..- .--. .- .-.. .. / .-.")
-// inputString ="our group is awesome";
-// console.log(morseCode(inputString));
-// console.log("--- ..- .-. / --. .-. --- ..- .--. / .. ... / .- .-- . ... --- -- .");
-// inputString = "thisisavalidinput";
-// console.log(morseCode(inputString));
-// console.log("- .... .. ... .. ... .- ...- .- .-.. .. -.. .. -. .--. ..- -");
-// const match=regex[a-z0-9];
-// console.log()
-
-// inputString = "thisisnotavalidinput!!";
-// console.log(checkValidInput(inputString));
-// inputString = "Rupali R";
-// console.log(checkValidInput(inputString));
+let input2=".-. ..- .--. .- .-.. .. / .-.";
+// console.log(morseCode(input2,"off"));

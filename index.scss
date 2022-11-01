@@ -15,8 +15,10 @@ $buttonFontColor: #013A63;
     font-size: 20px;
 } // * end
 main {
-    width: 375px;
-    height: 65vh;
+    // width: 375px;
+    // height: 65vh;
+    width: 95%;
+    height: 90%;
     display: flex;
     flex-direction: column;
 }
@@ -25,8 +27,8 @@ main {
     flex-direction: column;
     background: linear-gradient(45deg, $backgroundColor1, $backgroundColor2);
     padding: 0;
-    width: 45vw;
-    height: 65vh;
+    width: 90%;
+    height: 95%;
     margin: auto;
     // margin: 10px 10px 10px 10px;
     border-radius: 10px;
@@ -35,8 +37,8 @@ main {
     justify-items: center;
     &__heading {
         color: $backgroundColor1;
-        width: 375px;
-        font-size: 30px;
+        width: 90%;
+        font-size: 27px;
         margin-left: auto;
         margin-right: auto;
         padding: 0;
@@ -44,10 +46,11 @@ main {
     }
 //toggle
     .toggle {
-        --width: 80px;
-        --height: calc(var(--width) / 3);
+        --width: 95px;
+        --height: calc(var(--width) / 3.5);
         // --height: 40px;
         position: relative;
+        bottom: 5px;
         display: inline-block;
         width: var(--width);
         height: var(--height);
@@ -67,7 +70,7 @@ main {
         top: 0;
         left: 0;
         width: 100%;
-        height: 25%;
+        height: 33%;
         border-radius: var(--height);
         background-color: $displayBackgroundColor;
         transition: all 0.4s ease-in-out;
@@ -78,7 +81,8 @@ main {
         top: 0;
         left: 0;
         width: calc(var(--height));
-        height: calc(var(--height));
+        // height: calc(var(--height));
+        height: calc(var(--width) / 2.9);
         border-radius: calc(var(--height) / 2);
         background-color: $toggleColor;
         // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
@@ -96,7 +100,8 @@ main {
         position: absolute;
         // top: 18px;
         left: 30px;
-        bottom: 18px;
+        // top: 5px;
+        bottom: 15px;
         width: 50%;
         height: 50%;
         // width: 100%;
@@ -135,6 +140,7 @@ main {
     &__input { // &__input start
         display: flex;
         flex-direction: column;
+        width: 90%;
         padding: 0;
         // background-color: $translatorBackgroundColor;
         gap: 20px;
@@ -144,15 +150,10 @@ main {
         font-size: medium;
         word-wrap: break-word;
         // word-break: break-all;
-        height: 15vh;
-        width: 40vw;
-        text-align: left;
-        justify-content:flex-start;
-        align-items:flex-start;
-        // width: 200px;
+        // height: 15vh;
+        height: 20vh;
+        width: 100%;
         padding: 5px;
-        // margin: 0;
-        // margin: auto;
         border: none;
     }
 
@@ -163,7 +164,7 @@ main {
         width: 150px;
         text-align: center; // centers text in a 
         // margin: auto;
-        margin-top: 1px;
+        margin-top: 45px;
         padding: 0;
         box-shadow: 5px 5px $shadowColor;
     } // button end
@@ -174,14 +175,13 @@ main {
 
     #output-area { // &__output start
         background-color: $displayBackgroundColor;
+        height: 20vh;
+        width: 80%;
+        padding: 5px;
         border-radius: 5px;
         justify-content: center;
         align-items:flex-start;
         font-size: medium;
-        margin: auto;
-        padding: 5px;
-        margin-bottom: 30px;
-        height: 15vh;
-        width: 40vw;
+        margin-bottom: 100px;
     }
 }

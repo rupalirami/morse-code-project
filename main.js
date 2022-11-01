@@ -1,5 +1,6 @@
 // import function
-import { morseCode, checkValidInput, clearOutput } from "./index.js";
+// import { morseCode, checkValidInput, clearOutput } from "./index.js";
+import { morseCode, checkValidInput } from "./index.js";
 
 // get DOM variables
 const textInput = document.getElementById("#input-area");
@@ -11,6 +12,8 @@ const translateButton = document.querySelector("#translate-button");
 console.log(translateButton);
 const translatedOutput = document.querySelector("#output-area");
 console.log(translatedOutput);
+// const toggleValue = document.querySelector("#toggle-switch");
+// console.log(`togglevalue=${toggleValue.value}`);
 
 //initialize variables
 translatedOutput.style.color = "#212529";

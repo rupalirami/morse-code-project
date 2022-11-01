@@ -9,9 +9,7 @@ export const checkValidInput = (inputString) => {
         return isValid;
     };
 };
-export const clearOutput = (element) => {
-    element.value = "";
-};
+
 export const morseCode = (inputString) => {
     const morseCodeAlphabet = [
         "A:.- ",
